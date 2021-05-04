@@ -94,6 +94,13 @@ public class Main extends JavaPlugin implements Listener {
         admins.addExtra("    ");
         admins.addExtra(dreampac);
 
+        TextComponent parkour = new TextComponent("Nimm am neuen Parkourevent teil: parkour.whsminecraft.de");
+        TextComponent parkourArticle = new TextComponent("Hier erfährst du mehr");
+        parkourArticle.setColor(ChatColor.GOLD);
+        parkourArticle.setClickEvent((new ClickEvent(ClickEvent.Action.OPEN_URL, "https://whsminecraft.de/news/parkour_event/")));
+        parkourArticle.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new Text("Klick mich!")));
+
+
 
         message.addExtra(divider);
         message.addExtra("\n");
@@ -108,6 +115,12 @@ public class Main extends JavaPlugin implements Listener {
         message.addExtra(help);
         message.addExtra("\n");
         message.addExtra(admins);
+        message.addExtra("\n");
+        message.addExtra(divider);
+        message.addExtra("\n");
+        message.addExtra(parkour);
+        message.addExtra("\n");
+        message.addExtra(parkourArticle);
         message.addExtra("\n");
         message.addExtra(divider);
 
