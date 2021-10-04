@@ -4,3 +4,7 @@ author: Ruben Ollesch
 api-version: 1.17
 version: 1.1
 website: https://whsminecraft.de
+commands:
+  infoplugin:
+    usage: /infoplugin
+    description: Administrative command

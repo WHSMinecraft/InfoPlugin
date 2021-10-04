@@ -13,6 +13,10 @@ public class Main extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         getServer().getPluginManager().registerEvents(this, this);
+
+        Commands commands = new Commands(this);
+        getCommand("infoplugin").setExecutor(commands);
+        getCommand("infoplugin").setTabCompleter(commands);
         saveDefaultConfig();
         getLogger().info("Plugin was successfully enabled.");
     }
