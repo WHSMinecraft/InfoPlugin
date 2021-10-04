@@ -1,6 +1,7 @@
 package de.whsminecraft.InfoPlugin;
 
 
+import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -23,10 +24,12 @@ public class Main extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
-        List<String> commands = getConfig().getStringList("onPlayerJoin");
-        commands.forEach(c -> {
-            e.getPlayer().performCommand(c);
-        });
+        String[] lines = getConfig().getString("onPlayerJoin").split("\n");
+        for (String line : lines) {
+            String player = e.getPlayer().getDisplayName();
+            String command = "tellraw " + player + " " + line;
+            Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), command);
+        };
 
         getLogger().info("Sent welcome screen to " + e.getPlayer().getDisplayName());
     }

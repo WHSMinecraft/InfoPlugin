@@ -1,10 +1,11 @@
-onPlayerJoin:
-  - tellraw @s [{"text":"-----------------------------------------------------","color":"dark_aqua"}]
-  - tellraw @s [{"text":"Willkommen auf dem ","color":"white"},{"text":"WHS Minecraft Server","color":"green"},{"text":"!","color":"white"}]
-  - tellraw @s [{"text":""}]
-  - tellraw @s [{"text":"Willst du mehr über den Server herausfinden? Klicke hier:","color":"white"}]
-  - tellraw @s [{"text":"Website","color":"gold","clickEvent":{"action":"open_url","value":"https://whsminecraft.de"},"hoverEvent":{"action":"show_text","contents":"Homepage des Servers"}},{"text":"   "},{"text":"Karte","color":"gold","clickEvent":{"action":"open_url","value":"https://whsminecraft.de/map/"},"hoverEvent":{"action":"show_text","contents":"Interaktive Weltkarte"}},{"text":"   "},{"text":"News","color":"gold","clickEvent":{"action":"open_url","value":"https://whsminecraft.de/news/"},"hoverEvent":{"action":"show_text","contents":"News & Ankündigungen"}},{"text":"   "},{"text":"FAQ","color":"gold","clickEvent":{"action":"open_url","value":"https://whsminecraft.de/about/"},"hoverEvent":{"action":"show_text","contents":"Fragen & Antworten"}}]
-  - tellraw @s [{"text":""}]
-  - tellraw @s [{"text":"Brauchst du Hilfe? Schreibe den Admins:"}]
-  - tellraw @s [{"text":"DReamPac","color":"gold","clickEvent":{"action":"suggest_command","value":"/tell DReamPac "}},{"text":"   "},{"text":"Trollesch","color":"gold","clickEvent":{"action":"suggest_command","value":"/tell Trollesch "}}]
-  - tellraw @s [{"text":"-----------------------------------------------------","color":"dark_aqua"}]
+# Specify formatted lines to print. They will be used via /tellraw
+onPlayerJoin: |
+  [{"text":"-----------------------------------------------------","color":"dark_aqua"}]
+  [{"text":"Willkommen auf dem ","color":"white"},{"text":"WHS Minecraft Server","color":"green"},{"text":"!","color":"white"}]
+  [{"text":""}]
+  [{"text":"Willst du mehr über den Server herausfinden? Klicke hier:","color":"white"}]
+  [{"text":"Website","color":"gold","clickEvent":{"action":"open_url","value":"https://whsminecraft.de"},"hoverEvent":{"action":"show_text","contents":"Homepage des Servers"}},{"text":"   "},{"text":"Karte","color":"gold","clickEvent":{"action":"open_url","value":"https://whsminecraft.de/map/"},"hoverEvent":{"action":"show_text","contents":"Interaktive Weltkarte"}},{"text":"   "},{"text":"News","color":"gold","clickEvent":{"action":"open_url","value":"https://whsminecraft.de/news/"},"hoverEvent":{"action":"show_text","contents":"News & Ankündigungen"}},{"text":"   "},{"text":"FAQ","color":"gold","clickEvent":{"action":"open_url","value":"https://whsminecraft.de/about/"},"hoverEvent":{"action":"show_text","contents":"Fragen & Antworten"}}]
+  [{"text":""}]
+  [{"text":"Brauchst du Hilfe? Schreibe den Admins:"}]
+  [{"text":"DReamPac","color":"gold","clickEvent":{"action":"suggest_command","value":"/tell DReamPac "}},{"text":"   "},{"text":"Trollesch","color":"gold","clickEvent":{"action":"suggest_command","value":"/tell Trollesch "}}]
+  [{"text":"-----------------------------------------------------","color":"dark_aqua"}]
